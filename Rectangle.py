@@ -16,9 +16,9 @@ class Rectangle:
     def print_rectangle(self):
         for i in range(self.height):
             if i == 0 or i == self.height - 1:
-                print('*' * self.width)
+                print('* ' * self.width)
             else:
-                print('*' +' ' * (self.width - 2 + '*'))
+                print('*' + ' ' * (self.width * 2 - 3) + '*')
                       
 def main():
     while True:
@@ -26,7 +26,7 @@ def main():
         width = int(input("Please Enther The Width Of The Rectangle: "))
         rect = Rectangle(height, width)
         print(f"Perimeter: {rect.calculate_perimeter()}")
-        print(f"Area: {rect.caclulate_area()}")
+        print(f"Area: {rect.calculate_area()}")
         print(f"Rectangle: ")
         rect.print_rectangle()
     

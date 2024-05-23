@@ -21,18 +21,20 @@ class Rectangle:
                 print('*' + ' ' * (self.width * 2 - 3) + '*')
                       
 def main():
-    while True:
+
+    print("Welcome to the Rectangle Maker!\n")
+    again = "yes"
+
+    while again.lower() == "yes":
         height = int(input("Please Enter The Height Of The Rectangle: "))
         width = int(input("Please Enther The Width Of The Rectangle: "))
         rect = Rectangle(height, width)
         print(f"Perimeter: {rect.calculate_perimeter()}")
         print(f"Area: {rect.calculate_area()}")
-        print(f"Rectangle: ")
+        print("\nHere's Your Rectangle!!!\n")
         rect.print_rectangle()
-    
-        continue_choice = input("Do You Want To Create Another Rectangle? (Yes/No): ")
-        if continue_choice.lower() != "yes":
-            break
+        again = input("\nWould You Like to Build Another Rectangle? (Yes/No): ")
+    print("\nThank You for Using the Rectangle Maker!\n")
     
 if __name__ == "__main__":
     main()
